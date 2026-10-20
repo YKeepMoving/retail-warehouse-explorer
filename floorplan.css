@@ -1,0 +1,48 @@
+.wf-floor-host{width:100%;line-height:1.3;--wf-teal:#007d69;--wf-amber:#ffbd54;--wf-ink:#244d42;--wf-outline:#a5bba6;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wf-floor-host .wf-floor-svg{display:block;width:100%;height:auto;overflow:visible;isolation:isolate}
+.wf-floor-host .wf-floor-caption{font-size:12px;font-weight:750;letter-spacing:1.1px;fill:#406556}
+.wf-floor-host .wf-floor-key{font-size:11px;fill:#698073;font-weight:500}
+.wf-floor-host .wf-aisle-label{font-size:10px;letter-spacing:1px;fill:#937b34;font-weight:650}
+.wf-floor-host .wf-outside-label{font-size:10px;letter-spacing:1.2px;fill:#81988b;font-weight:750}
+.wf-floor-host .wf-zone{cursor:pointer;outline:none}
+.wf-floor-host .wf-zone-base{fill:#f6f9f1;stroke:#b5c7b0;stroke-width:1.3;transition:fill .15s,stroke .15s}
+.wf-floor-host .wf-zone-label{font-size:13px;letter-spacing:.45px;font-weight:800;fill:#244d42;pointer-events:none}
+.wf-floor-host .wf-zone-sub{font-size:10.6px;fill:#728577;pointer-events:none;letter-spacing:0}
+.wf-floor-host .wf-object{pointer-events:none}
+.wf-floor-host .wf-bin-cell{fill:#d3e4c9;stroke:#9eb993;stroke-width:.6}
+.wf-floor-host .wf-zone-unused .wf-zone-base{fill:#e7ede2;stroke:#cbd5c4}
+.wf-floor-host .wf-zone-unused .wf-object{opacity:.42}
+.wf-floor-host .wf-zone-unused .wf-zone-label,.wf-floor-host .wf-zone-unused .wf-zone-sub{fill:#839383}
+.wf-floor-host .wf-zone-active .wf-zone-base{fill:#fff0cf;stroke:#e3a442;stroke-width:2.5}
+.wf-floor-host .wf-zone-active .wf-zone-label{fill:#754f18}
+.wf-floor-host .wf-zone:hover .wf-zone-base{stroke:#007d69;stroke-width:2.5;fill:#ebf5e4}
+.wf-floor-host .wf-zone:focus-visible .wf-zone-base{stroke:#007d69;stroke-width:3.5;stroke-dasharray:5 3}
+.wf-floor-host .wf-camera{fill:#eef5e8;stroke:#5d8c77;stroke-width:1.2;pointer-events:none;opacity:.9}
+.wf-floor-host .wf-camera circle{fill:none}
+.wf-floor-host .wf-zone:hover .wf-camera{stroke:#007d69;opacity:1}
+.wf-floor-host .wf-destination .wf-zone-base{fill:#e4f2e9;stroke:#92b9a4;stroke-dasharray:5 4}
+.wf-floor-host .wf-destination .wf-zone-label{font-size:12px}
+.wf-floor-host .wf-destination .wf-zone-sub{font-size:9.5px}
+.wf-floor-host .wf-route-trail{fill:none;stroke:#5b9b81;stroke-width:4;stroke-linejoin:round;stroke-linecap:round;opacity:.22}
+.wf-floor-host .wf-route-guide{fill:none;stroke:#2a9678;stroke-width:4;stroke-linejoin:round;stroke-linecap:round;opacity:.15}
+.wf-floor-host .wf-route-live{fill:none;stroke:#007d69;stroke-width:4.5;stroke-linejoin:round;stroke-linecap:round}
+.wf-floor-host .wf-route-return{stroke:#ac7f2e}
+.wf-floor-host .wf-route-signal{fill:none;stroke:#557fba;stroke-width:3;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:5 7;opacity:.95}
+.wf-floor-host .wf-return-label{font-size:10.5px;font-weight:700;letter-spacing:1px;fill:#a37b37}
+.wf-floor-host .wf-token-halo{fill:#007d69;opacity:.11}
+.wf-floor-host .wf-token-shape{fill:#ffce75;stroke:#815b22;stroke-width:1.5;stroke-linejoin:round}
+.wf-floor-host .wf-token-shape path,.wf-floor-host .wf-token-shape rect+rect{fill:none}
+.wf-floor-host .wf-token-shape path:first-child{fill:#ffce75}
+.wf-floor-host .wf-token-shape .wf-token-foot{stroke-width:3;stroke:#8f723e}
+.wf-floor-host .wf-token-tag rect{fill:#174e3e;stroke:#f7fbf0;stroke-width:1}
+.wf-floor-host .wf-token-tag text{font-size:8.5px;font-weight:800;letter-spacing:.55px;fill:#fff}
+.wf-floor-host .wf-step-badge{cursor:pointer;outline:none}
+.wf-floor-host .wf-step-badge circle{fill:#fff;stroke:#819c85;stroke-width:1.3}
+.wf-floor-host .wf-step-badge text{font-size:10px;font-weight:750;fill:#55725d;pointer-events:none;font-variant-numeric:tabular-nums}
+.wf-floor-host .wf-step-done circle{fill:#007d69;stroke:#007d69}
+.wf-floor-host .wf-step-done text{fill:#fff}
+.wf-floor-host .wf-step-current circle{fill:#ffc65f;stroke:#9b722b;stroke-width:2}
+.wf-floor-host .wf-step-current text{fill:#594117}
+.wf-floor-host .wf-step-badge:hover circle,.wf-floor-host .wf-step-badge:focus-visible circle{stroke:#123e31;stroke-width:3}
+@media(prefers-reduced-motion:reduce){.wf-floor-host .wf-zone-base{transition:none}}
+.wf-floor-host .wf-zone-label{font-size:15px;letter-spacing:.1px}.wf-floor-host .wf-zone-sub{font-size:11.7px}.wf-floor-host .wf-destination .wf-zone-label{font-size:12px}.wf-floor-host .wf-destination .wf-zone-sub{font-size:9.5px}.wf-floor-host .wf-bulky-prep{pointer-events:none}

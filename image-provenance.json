@@ -1,0 +1,287 @@
+{
+  "generatedOn": "2026-10-20",
+  "method": "ChatGPT built-in image generation",
+  "referenceImagesSupplied": false,
+  "images": [
+    {
+      "key": "receiving",
+      "title": "Inbound receiving",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration of inbound receiving at a modern generic warehouse. Wide landscape composition, approximately 16:10. View from inside the building towards two open dock doors; an unbranded trailer backed into one door; a pallet of plain closed kraft cartons just inside the dock; an empty manual pallet jack and a low receiving bench with a handheld scanner. Show a clearly separated pedestrian walkway and realistic dock leveller, yellow safety bollards, neutral steel structure. No people. The primary subject is the receiving handoff, not storage racks or picking robots. Physically plausible equipment, tidy operational warehouse, natural skylight and soft industrial lights, slate gray, teal safety accents and warm kraft cardboard, documentary photography feel, eye-level three-quarter view, sharp usable detail. No copied composition or real company facility, no logos, trademarks, watermarks, words, numbers, signage, barcodes, QR codes, shipping labels, badges or personal data. No captions, text overlay, collage or multi-panel image. Generate from this description alone.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "d122d91ea5b3618d99284e1ebf74827ec7207781f6e06977096cd49c55b80ad1",
+      "webAsset": "assets/generated/receiving.webp",
+      "webAssetSha256": "c9f2e2646d25df68d5929cb924e87150a3911cab29afb386dc749acbe732dfaf"
+    },
+    {
+      "key": "storage",
+      "title": "Industrial inventory storage",
+      "prompt": "Use case: photorealistic-natural. Create ONE new original landscape warehouse documentary-style image, 16:10. Subject: realistic industrial storage for BULKY RETAIL GOODS. Eye-level view down a large commercial distribution-centre aisle, heavy-duty bolted steel pallet racking 8 metres tall with deep orange load-bearing beams and blue-gray uprights fixed to the concrete floor. On the rack beams sit standard timber pallets containing securely shrink-wrapped large plain cardboard appliance cartons and long flat-packed furniture cartons. Include a pallet-size boxed refrigerator, washing-machine-size closed cartons, and long flat packs, all appropriately supported and stable. Products are fully packaged, no loose household objects. Clearly believable industrial scale: large pallets, high clearances, broad clear forklift aisle, overhead steel trusses, fire sprinkler pipes, rack protectors and safety bollards. No workers. Slightly scuffed concrete, authentic pallet timber, subtle packaging wrinkles, realistic uneven warehouse illumination, natural perspective, practical busy commercial warehouse atmosphere rather than pristine CGI. No domestic shelving, cube bookcases, small freestanding shelf pods, caster wheels, decorative plants, vases, baskets, towels, open home decor, showroom staging or home furniture display. No logo, brand, words, numbers, readable marks, shipping labels, QR codes, barcodes, watermark or captions. This is an original fictional warehouse scene generated from this written description, not a copy of any existing photograph.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "406fddf839f4a5722d9b726ff1e4beab6246553f035077df762d827f7429f981",
+      "webAsset": "assets/generated/storage.webp",
+      "webAssetSha256": "f43891fee32beeab1aa0431f24ff0910c57e67b66bf5deb96a3ff92acf4803c1"
+    },
+    {
+      "key": "picking",
+      "title": "Goods-to-person workstation",
+      "prompt": "Create ONE original photorealistic landscape illustration for a warehouse education website, approximately 16:10. Authentic commercial distribution-centre photography: realistic scale, bolted heavy-duty equipment, gently worn concrete, steel roof trusses and practical industrial lighting, natural perspective and believable materials. Fictional generic facility and equipment composed from this written brief only, not copied from any existing photo. Use suitable pallet and carton dimensions; loads must be supported. No logos, brands, text, numbers, barcodes, QR codes, shipping addresses, employee badges, watermarks or captions. No domestic shelving, bookcases, ornamental plants, vases, baskets, loose home decor or showroom displays. Keep all retail stock in closed plain cartons or appropriate industrial totes. Anonymous hands or rear view only where explicitly requested, never a visible face. Scene: A real-scale industrial goods-to-person workstation supplied by a tote conveyor. Gray 600-by-400-millimetre-style stock totes rest in a steel presentation frame, a separate bank of smaller order totes sits at the ergonomic pick face, guarded conveyor and dense industrial tote storage extend into background. A few small CLOSED plain retail cartons sit inside the stock tote. No person. No domestic shelf pod, no unwrapped household objects. This is the small-item each-picking process; do not put bulky appliances inside totes.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "c9a3c3f5a1ddcb0622c0b19c97cf9ca768e1454e29e9c5cd38f3a1dc101b39f7",
+      "webAsset": "assets/generated/picking.webp",
+      "webAssetSha256": "ca4d1bdc53436a93bea0da82199b42eb0ffcc87c54b89e9a933dab73552416c6"
+    },
+    {
+      "key": "packing",
+      "title": "Parcel packing",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Close-to-medium view of a well organised consumer-order packing bench: plain open kraft carton with unbranded folded apparel, kraft paper cushioning, tape dispenser and blank shipping document face-down. Anonymous gloved hands only at far edge placing cushioning inside. Background roller conveyor with closed cartons. No faces, no readable marks. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "32c27a80b18b082303c367d12c766393d59457061a75817f212bced6c342757d",
+      "webAsset": "assets/generated/packing.webp",
+      "webAssetSha256": "1dabe56e2dee74141a5eec985faaffa78ac52e4325f848daecf61273ed64ed1c"
+    },
+    {
+      "key": "quality",
+      "title": "Parcel verification",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A single unmarked kraft parcel travels on a short conveyor through a generic overhead vision inspection arch with camera and a light sensor; the conveyor is mounted on a check-weighing platform. Tiny status lamps only, no numerical display or label. Clear three-quarter close view of the parcel verification mechanism. No people, no red laser crossing unsafe walkway. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "d5ad66a76e43fc879f3dc831f45360bd3c21fbc2e6cb7eb94e85732d57c031fe",
+      "webAsset": "assets/generated/quality.webp",
+      "webAssetSha256": "bab933868729cc5515c364ccc20af8f1c06ebe91213a52fb2a2b38e771456e9b"
+    },
+    {
+      "key": "sortation",
+      "title": "Parcel sortation",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: High oblique warehouse view of a mechanically plausible parcel sorter with one main belt, two diverter junctions and separate takeaway lanes. A few plain closed cartons spaced on the belts, safety railing and empty pedestrian walkway. Primary subject is conveyor routing, no pallet racks dominating, no people. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "0a508153a6a832e4082af71bed019043d53eea0afba395df4781ebf2cafac99e",
+      "webAsset": "assets/generated/sortation.webp",
+      "webAssetSha256": "1e5328a047f961fedbd10c2d20bbbab7e0a933405c7ab41046ce7e139afa93fb"
+    },
+    {
+      "key": "dispatch-b2c",
+      "title": "Parcel loading",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: View along an extendable powered belt conveyor passing through a warehouse dock door into the interior of a plain outbound trailer. A few unlabelled cartons on belt and neatly arranged cartons on trailer floor. Visible dock leveller, door frame and separation barriers. No people, no palletised freight. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "42789b3dba6e7753e89f4f5dc323979bbab8d4f6ce7f179dbd3b3bffa956fdff",
+      "webAsset": "assets/generated/dispatch-b2c.webp",
+      "webAssetSha256": "3ac669e4a382ece41f72ddab118e1bcf3b1fba98b1f861117804f2e213025b71"
+    },
+    {
+      "key": "delivery-b2c",
+      "title": "Consumer delivery",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A plain sealed kraft parcel beside a closed generic modern residential door and simple doormat. Soft late-afternoon daylight, wide landscape crop, ordinary doorstep detail. No people, house numbers, names, address, logo, shipping label, QR code or barcode. The box is entirely unmarked and fictional. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "075b3d6f11c9755f14e3f6c0a30ed857e66bcd2a05722f17670f9690aa1af2bc",
+      "webAsset": "assets/generated/delivery-b2c.webp",
+      "webAssetSha256": "02d53fc4a4a915733303058d04bc81d3d50923cadc36c411a791e60fe5d07462"
+    },
+    {
+      "key": "returns",
+      "title": "Return inspection",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Top-down three-quarter close view of return inspection bench: anonymous gloved hands examine an unbranded small electric kettle beside its opened kraft return carton, simple test mat and three empty sorting trays. No person beyond hands, no ID badge, no printed documents, no labels or codes. Emphasise condition checking rather than packing for shipping. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "f02457761c99e88ea08ce99e28cd3f8cb1f7a538915f7d96b272e6f986baa521",
+      "webAsset": "assets/generated/returns.webp",
+      "webAssetSha256": "0b8143710646a33ac3e0c23b20a993c575de192468c81f813549d5d0492aa22d"
+    },
+    {
+      "key": "dispatch-b2b",
+      "title": "Store pallet building",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A generic industrial articulated robot arm inside a fully fenced cell stacks plain rectangular closed retail cases in stable interlocking layers on a wooden pallet. Conveyor brings cases through a guarded opening, pallet sits on a pallet conveyor. Clear oblique medium-wide view of arm gripper and pallet. No humanoid, no people, no company marks. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "608a8d4242fb10261c01ac9f9c5a2afc3ddabe92fc1b50b23c6c466e208a6b66",
+      "webAsset": "assets/generated/dispatch-b2b.webp",
+      "webAssetSha256": "229804d83d63075b8760528c27e365da17fcf5b2396654bbefc6b71f8c1881ff"
+    },
+    {
+      "key": "truck-b2b",
+      "title": "Store replenishment transport",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A plain white semi-trailer freight truck driving on a generic logistics access road beside low distribution buildings, viewed front-side three-quarter in daylight. No branding, text, readable number plate, visible driver face or recognisable landmark. Distinct from parcel loading image: exterior transport, whole vehicle. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "ba53ab4228b21edef735238cb6e0759ae54acde7c75749da7eca8b81cbd6ce23",
+      "webAsset": "assets/generated/truck-b2b.webp",
+      "webAssetSha256": "89eb3076069721161d3182b21c0de7ae25f1d701d91e0dd64a51511cf985cb6d"
+    },
+    {
+      "key": "humanoid",
+      "title": "Humanoid tote handoff",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A fictional unbranded biped industrial humanoid with neutral gray housing and a simple featureless head, positioned stationary beside a waist-high conveyor, both hands holding ONE gray plastic tote ready to place on conveyor. Plain guarded transfer area with no person. Purpose-specific repetitive tote transfer only; no full warehouse autonomy, no commercial robot lookalike, no brand logos. Clear side three-quarter view showing both feet on floor and contact with tote. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "67c71d100fa96e4fa1e27ca4b5d897659f229d425392b281b6789baffbaec041",
+      "webAsset": "assets/generated/humanoid.webp",
+      "webAssetSha256": "11263375ba9af02ce184dd1bc3d355c2c6d439a456093aea4d134ad24c33e393"
+    },
+    {
+      "key": "amr",
+      "title": "Autonomous pallet transport",
+      "prompt": "Create ONE original photorealistic landscape illustration for a warehouse education website, approximately 16:10. Authentic commercial distribution-centre photography: realistic scale, bolted heavy-duty equipment, gently worn concrete, steel roof trusses and practical industrial lighting, natural perspective and believable materials. Fictional generic facility and equipment composed from this written brief only, not copied from any existing photo. Use suitable pallet and carton dimensions; loads must be supported. No logos, brands, text, numbers, barcodes, QR codes, shipping addresses, employee badges, watermarks or captions. No domestic shelving, bookcases, ornamental plants, vases, baskets, loose home decor or showroom displays. Keep all retail stock in closed plain cartons or appropriate industrial totes. Anonymous hands or rear view only where explicitly requested, never a visible face. Scene: A low generic autonomous PALLET TRANSPORT robot carrying a standard timber pallet of securely wrapped large closed cartons along a warehouse travel aisle. Robot is directly beneath and supporting the pallet, squat industrial chassis and robust wheels, visible safety scanner domes; clear pallet load stability. Another unloaded robot waits in the far background. No domestic shelving pods, no caster-mounted bookcase, no people. Bulky cartons remain on the pallet. It transports a load, not grasps individual products.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "da45db925610f875e8bd3302f4364346eac5cfb4275f3216fc00b0f13f62eb9f",
+      "webAsset": "assets/generated/amr.webp",
+      "webAssetSha256": "53aaadacbcbf92666cac55c007ac1b0450c1b645fca0eacda5ca19ff9872aac0"
+    },
+    {
+      "key": "receiving-scan",
+      "title": "Inbound identification",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Close view of anonymous gloved hand holding generic handheld optical scanning device toward a plain inbound carton on receiving bench. Scanner has a small green indicator; carton has a blank neutral identification patch with NO actual printed bars, text or encoded data. Inspection clipboard turned face-down, stock in background. No face or badge. Educational concept of identification without personal/shipment data. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "32bf9a18ca56aa56762ced91f86385f707eea49d775a871b065dd745804cd3d3",
+      "webAsset": "assets/generated/receiving-scan.webp",
+      "webAssetSha256": "835759d5551e2438085614a9d60d404b60a1d5f23ccf63dd3106e573e22ea070"
+    },
+    {
+      "key": "forklift-b2b",
+      "title": "Pallet movement",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A generic electric forklift, stopped in a warehouse transport aisle, carrying a stable pallet of plain cartons with forks close to floor. Cabin visibly empty, no person operating it, overhead guard, realistic fork engagement under pallet, segregated pedestrian lane and storage racks in background. Medium-wide side three-quarter view. No logos or text. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "5efad43658cebf4e2a729754bb3798304519f2d6e51b7044e5500226d4ee73d8",
+      "webAsset": "assets/generated/forklift-b2b.webp",
+      "webAssetSha256": "e1fb723b078eba70a8b03012976ac7f86894b50b35d0da88463d03400ec6c472"
+    },
+    {
+      "key": "storage-b2b",
+      "title": "Reserve pallet storage",
+      "prompt": "Create ONE original photorealistic landscape illustration for a warehouse education website, approximately 16:10. Authentic commercial distribution-centre photography: realistic scale, bolted heavy-duty equipment, gently worn concrete, steel roof trusses and practical industrial lighting, natural perspective and believable materials. Fictional generic facility and equipment composed from this written brief only, not copied from any existing photo. Use suitable pallet and carton dimensions; loads must be supported. No logos, brands, text, numbers, barcodes, QR codes, shipping addresses, employee badges, watermarks or captions. No domestic shelving, bookcases, ornamental plants, vases, baskets, loose home decor or showroom displays. Keep all retail stock in closed plain cartons or appropriate industrial totes. Anonymous hands or rear view only where explicitly requested, never a visible face. Scene: Wide oblique view across conventional RESERVE PALLET STORAGE, taken from a cross-aisle so the side and front of several rack bays are visible. Robust steel uprights and heavy beam levels support standard wooden pallets loaded with stretch-wrapped CLOSED appliance-sized retail cartons and long flat-packed furniture cases. Broad clear forklift aisles, rack end protectors and visible pallet support beams. A plain pallet jack sits at aisle edge. Static pallet racks, no crane, no automation grid, no people. Different composition from a symmetrical long-aisle photograph.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "56a13e7f610a0ac037002c083a8891d899ff7be56db7b6157b3914a362bca017",
+      "webAsset": "assets/generated/storage-b2b.webp",
+      "webAssetSha256": "0147d3619f18309ad3a7fde2e9928aaf379b5114379dd59299c43ad80603332e"
+    },
+    {
+      "key": "highbay",
+      "title": "Automated high-bay storage",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Dramatic medium-wide oblique view of a tall narrow-aisle automated pallet warehouse. Clearly visible generic yellow vertical stacker-crane mast on a floor rail, lifting carriage with telescopic forks aligned to one pallet position; tall dense pallet racks extend upward on both sides. Mesh safety fence and guarded pallet transfer port in foreground. No people or conventional forklift, no company marks. Mechanism and rails must be mechanically plausible. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "f8d9d43b85c9586a32a213abc7d2edb5619aea5aff18f57990a0b3d73686948b",
+      "webAsset": "assets/generated/highbay.webp",
+      "webAssetSha256": "09cbce68b9f95abf264221f3ef4d54cd06504f093f27258f033e84b14702c94d"
+    },
+    {
+      "key": "cube",
+      "title": "Robotic cube storage",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Elevated three-quarter overview of generic automated cube bin storage: a rectangular aluminium rail grid covers a dense block of stacked gray plastic bins; several small teal box-shaped retrieval robots travel on the top grid; a guarded bin presentation port is visible at the near side. A robot is over an open grid position using a vertical lifting frame. No people, pallet racks, commercial logos or product design copies. Physically coherent grid. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "9e931d46cfd670cd4cd260d5f6983f88ae45b994944282b7fe1842583268ed05",
+      "webAsset": "assets/generated/cube.webp",
+      "webAssetSha256": "64c0f4d5883c0654010a5aef95f939613863f9c9ef144084ad05eb0da24f9ae1"
+    },
+    {
+      "key": "bulky",
+      "title": "Long and bulky goods",
+      "prompt": "Create ONE original photorealistic landscape illustration for a warehouse education website, approximately 16:10. Authentic commercial distribution-centre photography: realistic scale, bolted heavy-duty equipment, gently worn concrete, steel roof trusses and practical industrial lighting, natural perspective and believable materials. Fictional generic facility and equipment composed from this written brief only, not copied from any existing photo. Use suitable pallet and carton dimensions; loads must be supported. No logos, brands, text, numbers, barcodes, QR codes, shipping addresses, employee badges, watermarks or captions. No domestic shelving, bookcases, ornamental plants, vases, baskets, loose home decor or showroom displays. Keep all retail stock in closed plain cartons or appropriate industrial totes. Anonymous hands or rear view only where explicitly requested, never a visible face. Scene: A retail OVERSIZE AND BULKY storage bay in a realistic warehouse. Long closed flat-packed furniture cartons rest horizontally on heavy-duty cantilever rack arms, each supported by multiple arms; a separate floor position contains one fully wrapped sofa-shaped furniture load on a broad timber skid and one tall unmarked boxed appliance. Clear wide handling aisle, heavy fork-access bases and protective steel bollards. No loose pipes dominating, no display furniture, no domestic shelves, no workers. Clearly bulky retail goods stored for industrial handling.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "b7446fe81498ae82d0430aaedd725d5d64bd5120766ea5ca0ab5fd446ceb4ccb",
+      "webAsset": "assets/generated/bulky.webp",
+      "webAssetSha256": "4d2aa125084a8913a34f8c1c78e6a9091c35553749f114f5d8b7f164eb2cc1cc"
+    },
+    {
+      "key": "case",
+      "title": "Gravity-fed case storage",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Close three-quarter view of gravity-fed carton flow picking racks: shallow sloping metal shelves fitted with parallel roller lanes; plain closed cardboard cases queue from back to front, with stops retaining front cases. Blue/teal lane dividers and clear access to case-picking face. No people, no pallet racking scale, no logos or labels. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "5722a503142486467d0d32ad77b96a80a4edd2b231564f5834ef9d954e25413a",
+      "webAsset": "assets/generated/case.webp",
+      "webAssetSha256": "22bec63cba863e5d20c5da62c03d1b6a457d08d73f222be4c96aeda54079686a"
+    },
+    {
+      "key": "control",
+      "title": "Warehouse control room",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A generic unoccupied warehouse operations control room, desks with chairs and a wall of monitors. Screens show only abstract coloured flow lines, blocks and simple equipment schematics, absolutely NO words, numbers, live camera footage, personal data or real software interface. A window looks into a conveyor warehouse. No people, logos or copied control-room layout. Wide three-quarter view. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "9442f0dcc215cad28a7a471411d19a7107b7eae14a1a191daa485c6127dd556e",
+      "webAsset": "assets/generated/control.webp",
+      "webAssetSha256": "f18a126aab7ae34fc304b26e85f1be1ac371eb269ae1232fdb9ba4a797a81c90"
+    },
+    {
+      "key": "service",
+      "title": "Equipment maintenance",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: A stopped roller conveyor with one clearly separated removable side service panel opened, tool trolley with wrench and socket set alongside. A disconnect handle is in off position and secured with a plain safety lock with no text tag. Generic guarded robot cell is distant behind mesh fence. No person or badge; no equipment moving during service. Close-medium oblique view of maintainable roller and bearing assembly. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "7680d6826073c1c3df9728eedfcaee087ce2049ab47625ebae5c0400586c08bc",
+      "webAsset": "assets/generated/service.webp",
+      "webAssetSha256": "d79f8c9b0caa30cdf36fc3e25a239db6bcc4e0b64bbb0bd0fd173a757828bbb3"
+    },
+    {
+      "key": "charging",
+      "title": "Mobile robot charging",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Five generic low-profile wheeled mobile transport robots parked individually against floor-level charging docks on a warehouse wall. Each robot has clear dock contact alignment and a small green charging indicator, no readable screens. No cargo on robots, separated approach spaces and pedestrian walkway. Wide low oblique angle, no people or logos. Clearly electrical charging scene rather than robot repair. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "68311d65c7e4cdaf7d1c39e15bc650ad35cb250348738523a1ce19449de6a6ee",
+      "webAsset": "assets/generated/charging.webp",
+      "webAssetSha256": "431d01ac7dd0e6c5ddd56321a8127a8bfe620cb77b9feab6d346607b4679c909"
+    },
+    {
+      "key": "picking-action",
+      "title": "Piece picking",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Medium close side-rear view of an anonymous warehouse worker with head fully outside frame, plain workwear and no badge, picking one small unbranded boxed retail item from a gray inventory tote and moving it toward a separate teal order tote at a goods-to-person workstation. Both totes and grasped item are clear; ergonomic bench, conveyor presents inventory tote. Hands anatomically normal; no robot arm or company marks. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "d41c973b6c29428f5f653eec4f4dbd8582694cd1f25077fd06f6cf0eb6ff3bbb",
+      "webAsset": "assets/generated/picking-action.webp",
+      "webAssetSha256": "cd898a5e45ed134038a3af4b9132a4a2a981d439257003ed196977b55359d398"
+    },
+    {
+      "key": "decant",
+      "title": "Case-to-tote decanting",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Medium oblique close warehouse view of a case-to-tote decant station: opened plain supplier carton containing several identical small plain retail boxes, empty gray plastic storage tote next to it, anonymous gloved hands transferring one small box FROM supplier carton INTO storage tote. A pallet of supplier cases is behind, tote conveyor in background. No face, badge, labels or logos; not order packing or outbound parcel shipment. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "215c9a6023d1894fc1272b94ed5b72ba0e09e038dffd9110e961b7aa84841860",
+      "webAsset": "assets/generated/decant.webp",
+      "webAssetSha256": "fbc477c83a6ccf35f93523b97b8da3e6e00b137252deb8c8544b389c89ee375d"
+    },
+    {
+      "key": "staging",
+      "title": "Outbound staging",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape educational image for an interactive retail warehouse website. Create ONE original photorealistic illustration, approximately 16:10 landscape. Generic fictional retail logistics operation, fresh composition designed only from this written brief. Physically plausible equipment, clean operational detail, natural skylight mixed with soft industrial lighting, neutral steel, teal accents, warm kraft cartons. Documentary photography feel, sharp detail. Do not copy or recreate any existing photograph. Do not depict a real named company, branded product, recognizable real person, or actual facility. No logos, trademarks, watermarks, words, letters, numbers, signs, shipping labels, barcodes, QR codes, badges, personal data or text overlays. No collages or multiple panels. People only if explicitly needed, anonymous hands or rear view with face fully out of view; plain workwear with no badge. Subject: Wide warehouse view toward closed outbound dock doors, distinct painted rectangular floor staging lanes containing several stable wooden pallets stacked with plain kraft cartons and lightly wrapped in clear stretch film. Open cross-aisle and safe access clearances visible. No dense rack storage dominating, no people, numbers, text signs or brands. This is temporary load assembly/staging before dispatch, not long-term storage. Additional realism constraints: no ornamental plants, household-display shelving, loose vases, towels, baskets or showroom staging; products fully packaged, appropriate industrial scale, credible supports and clearances, avoid polished CGI appearance.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "48e25d1190d758473a0cc19e38546433f4644e379c8d629084482ea5bce90420",
+      "webAsset": "assets/generated/staging.webp",
+      "webAssetSha256": "551ebb500dc67fcf0f5cc3d250d2faa30d4f01ec49c55538c40656acd66c554d"
+    },
+    {
+      "key": "bulky-pack",
+      "title": "Bulky-goods protective packing",
+      "prompt": "Create one original photorealistic landscape warehouse education image, 16:10. Realistic industrial scale, practical commercial handling, believable supports and clearances, natural lighting, subtle material wear. Plain fictional unbranded equipment and packaged goods, no company or product logos, text, numbers, barcodes, QR codes, shipping labels, faces, people, badges, addresses or watermark. Fresh composition from this written description alone, no reference photographs. A BULKY RETAIL GOODS protective packing station inside a warehouse. One tall plain refrigerator-sized closed carton stands stably on a timber pallet, with rigid cardboard corner protectors and broad straps. Beside it are long closed flat-packed furniture cartons on a separate broad skid, protected by corrugated sheets and clear stretch film. A grounded stationary low-profile pallet wrapping turntable, a parked manual pallet jack, a roll of stretch film and a strapping tool trolley explain large-item packing. Wide medium oblique view, deep bolted pallet racking in background. No small parcel packing bench, no tote, no domestic display shelves. Equipment is stopped; aisle is clear.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "40c0a5e7cffdff65cd6aa680bcf6fd2d8c83e21a8324c9da4ff008cc491db7ae",
+      "webAsset": "assets/generated/bulky-pack.webp",
+      "webAssetSha256": "9f1922b5d1c7fa80211568245a2662e8fedfc7f0c50dbf217bd5d3110774db65"
+    },
+    {
+      "key": "bulky-delivery",
+      "title": "Bulky-goods delivery",
+      "prompt": "Create one original photorealistic landscape warehouse education image, 16:10. Realistic industrial scale, practical commercial handling, believable supports and clearances, natural lighting, subtle material wear. Plain fictional unbranded equipment and packaged goods, no company or product logos, text, numbers, barcodes, QR codes, shipping labels, faces, people, badges, addresses or watermark. Fresh composition from this written description alone, no reference photographs. Stationary plain delivery box truck with rear doors open and a hydraulic tail lift lowered completely to ground level, outside a generic building receiving entrance. A large closed washing-machine-sized plain carton sits secured on a correctly sized two-wheel appliance hand truck on level ground beside the tail lift; additional large plain boxed goods are secured inside the truck. Focus on handling a BULKY delivery with suitable equipment, not a small parcel on a doorstep. Empty scene, no workers or visible driver, no house number or building name, no readable vehicle plate. Realistic truck proportions and tail-lift platform, daylight documentary photograph feel.",
+      "method": "built-in image_gen",
+      "referenceImagesUsed": false,
+      "originalPngSha256": "9d6761915d632f8a7f42d044524a04814bc0150762a9b50151b092576bc3a8f4",
+      "webAsset": "assets/generated/bulky-delivery.webp",
+      "webAssetSha256": "31c05ada2d7a6b386e7248c33771d80dd2e984a4ade4e11c7581517493208ff7"
+    }
+  ]
+}

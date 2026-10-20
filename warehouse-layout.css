@@ -1,0 +1,90 @@
+.w6-layout-host{width:100%;min-width:0;line-height:1.3;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;--w6-ink:#214d43;--w6-teal:#127b69;--w6-amber:#d99c3a;color:var(--w6-ink)}
+.w6-layout-host .w6-layout-svg{display:block;width:100%;height:auto;overflow:visible;background:#fbfcf8;border-radius:12px;isolation:isolate}
+.w6-layout-host .w6-building-wall{fill:none;stroke:#526d5d;stroke-width:3;pointer-events:none}
+.w6-layout-host .w6-zone{cursor:pointer;outline:none}
+.w6-layout-host .w6-zone-base{fill:#f4f6ee;stroke:#b5c5b2;stroke-width:1.4;transition:fill .16s,opacity .16s}
+.w6-layout-host .w6-group-b2c .w6-zone-base{fill:#e9f2e8}
+.w6-layout-host .w6-group-b2b .w6-zone-base{fill:#f6f0df}
+.w6-layout-host .w6-zone-inbound .w6-zone-base,.w6-layout-host .w6-zone-outbound .w6-zone-base{fill:#ecf1e7}
+.w6-layout-host .w6-group-support .w6-zone-base{fill:#e9eee7}
+.w6-layout-host .w6-zone-aisle-north .w6-zone-base,.w6-layout-host .w6-zone-aisle-south .w6-zone-base{fill:#f6edcf;stroke:#d4c69d}
+.w6-layout-host .w6-zone-outline{fill:none;stroke:transparent;stroke-width:3;pointer-events:none;transition:stroke .15s}
+.w6-layout-host .w6-zone:hover .w6-zone-outline{stroke:#388b73}
+.w6-layout-host .w6-zone:focus-visible .w6-zone-outline{stroke:#00735f;stroke-width:3.5;stroke-dasharray:6 3}
+.w6-layout-host .w6-zone.w6-is-active .w6-zone-outline{stroke:#d79a35;stroke-width:4}
+.w6-layout-host .w6-zone.w6-is-active .w6-zone-base{fill:#fff3d7}
+.w6-layout-host .w6-is-muted .w6-furniture{opacity:.34}
+.w6-layout-host .w6-is-muted .w6-zone-base{fill:#eef0e9}
+.w6-layout-host .w6-zone-labels.w6-is-muted{opacity:.58}
+.w6-layout-host .w6-label-layer,.w6-layout-host .w6-route-layer,.w6-layout-host .w6-actor-layer{pointer-events:none}
+.w6-layout-host .w6-label{font-size:14px;letter-spacing:.42px;font-weight:800;fill:#244e42}
+.w6-layout-host .w6-label-narrow{font-size:12.2px;letter-spacing:.13px}
+.w6-layout-host .w6-zone-area{font-size:11.7px;font-weight:600;fill:#697d68}
+.w6-layout-host .w6-zone-labels.w6-is-active .w6-label{fill:#825919}
+.w6-layout-host .w6-support-title{font-size:11px;font-weight:800;letter-spacing:.02px;fill:#315949}
+.w6-layout-host .w6-support-area{font-size:11px;font-weight:550;fill:#6c7e69}
+.w6-layout-host .w6-furniture{pointer-events:none;transition:opacity .16s}
+.w6-layout-host .w6-camera>circle:first-child{fill:#fbfdf4;stroke:#b9ccac;stroke-width:1}
+.w6-layout-host .w6-camera>path{fill:#dfeadc;stroke:#4e8067;stroke-width:1.3;stroke-linejoin:round}
+.w6-layout-host .w6-camera-lens{fill:#fff;stroke:#4e8067;stroke-width:1.3}
+.w6-layout-host .w6-rack-end{fill:none;stroke:#78967b;stroke-width:2}
+.w6-layout-host .w6-asrs-rack{fill:#b5c8b2;stroke:#799a7b;stroke-width:1}
+.w6-layout-host .w6-asrs-bin{fill:#dce8d0;stroke:#a7bea0;stroke-width:.6}
+.w6-layout-host .w6-crane-rail{fill:none;stroke:#b4bb9c;stroke-width:1.5;stroke-dasharray:4 3}
+.w6-layout-host .w6-bulky{fill:#d8cba6;stroke:#ad9f79;stroke-width:1}
+.w6-layout-host .w6-box-line{fill:none;stroke:#bbaa7d;stroke-width:1}
+.w6-layout-host .w6-grid-bed{fill:#b4c4ac;stroke:#7e9c7c;stroke-width:1}
+.w6-layout-host .w6-grid-cell{fill:#d7e5c8;stroke:#96b489;stroke-width:.6}
+.w6-layout-host .w6-grid-cell-1{fill:#cbdfbe}
+.w6-layout-host .w6-grid-cell-2{fill:#e1eace}
+.w6-layout-host .w6-grid-cell-3{fill:#bcd1ad}
+.w6-layout-host .w6-table{fill:#b7c7b5;stroke:#7d9d83;stroke-width:1}
+.w6-layout-host .w6-person ellipse{fill:#247b68;stroke:#eff5e8;stroke-width:1.1}
+.w6-layout-host .w6-person circle{fill:#e3b98c;stroke:#bd9972;stroke-width:.5}
+.w6-layout-host .w6-person path{fill:none;stroke:#347c67;stroke-width:2.5;stroke-linecap:round}
+.w6-layout-host .w6-arm>rect{fill:#8ea991;stroke:#557e63;stroke-width:1.2}
+.w6-layout-host .w6-arm>path{fill:none;stroke:#338d75;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.w6-layout-host .w6-arm>circle{fill:#d2ead0;stroke:#28735f;stroke-width:2}
+.w6-layout-host .w6-arm>path.w6-gripper{stroke:#335f4b;stroke-width:3}
+.w6-layout-host .w6-conveyor-base{fill:none;stroke:#a0b4a0;stroke-width:12;stroke-linecap:round}
+.w6-layout-host .w6-conveyor-rollers{fill:none;stroke:#dfe8d8;stroke-width:8;stroke-dasharray:2 5}
+.w6-layout-host .w6-screen{fill:#2d6351;stroke:#e2efda;stroke-width:1}
+.w6-layout-host .w6-sort-loop{fill:none;stroke:#91ad98;stroke-width:13}
+.w6-layout-host .w6-sort-rollers{fill:none;stroke:#dce7d5;stroke-width:8;stroke-dasharray:2 5}
+.w6-layout-host .w6-sort-chute{fill:none;stroke:#8cab91;stroke-width:8}
+.w6-layout-host .w6-tote-body{fill:#c5d7bc;stroke:#7f9d7f;stroke-width:1}
+.w6-layout-host .w6-stage-bay{fill:none;stroke:#cdbb7b;stroke-width:1.3;stroke-dasharray:4 3}
+.w6-layout-host .w6-furniture-label{font-size:8.6px;font-weight:750;letter-spacing:.8px;fill:#968057}
+.w6-layout-host .w6-return-arrow{fill:none;stroke:#4f9679;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.w6-layout-host .w6-tool{fill:none;stroke:#6c8b73;stroke-width:2}
+.w6-layout-host .w6-charge-bay{fill:#dce9d6;stroke:#80a378;stroke-width:1;stroke-dasharray:2 2}
+.w6-layout-host .w6-dock-bay{fill:#e2e9d9;stroke:#b1c19f;stroke-width:1;stroke-dasharray:4 3}
+.w6-layout-host .w6-bay-number{font-size:7.7px;letter-spacing:.5px;font-weight:650;fill:#869a7a}
+.w6-layout-host .w6-dock-small{font-size:8px;font-weight:700;fill:#7d9072;letter-spacing:.3px}
+.w6-layout-host .w6-small-arrow{fill:none;stroke:#5b9479;stroke-width:2;stroke-linecap:round}
+.w6-layout-host .w6-lane-mark{fill:none;stroke:#d5c690;stroke-width:1;stroke-dasharray:15 9}
+.w6-layout-host .w6-lane-arrow{fill:none;stroke:#c9b66f;stroke-width:2;stroke-linejoin:round;opacity:.8}
+.w6-layout-host .w6-aisle-label-bg{fill:#f6edcf}
+.w6-layout-host .w6-aisle-label{font-size:11.3px;font-weight:800;fill:#8c7738;letter-spacing:.25px}
+.w6-layout-host .w6-aisle-area{font-size:10.8px;font-weight:550;fill:#9a8548}
+.w6-layout-host .w6-apron{stroke:#e0e5d9;stroke-width:1}
+.w6-layout-host .w6-dock-door{fill:#8ba28a;stroke:#f5f8ed;stroke-width:1.5}
+.w6-layout-host .w6-trailer{fill:#cdd8c4;stroke:#8ea38a;stroke-width:1}
+.w6-layout-host .w6-truck-cab{fill:#5a8d78;stroke:#46715e;stroke-width:1}
+.w6-layout-host .w6-truck-window{fill:#d5e9dc;stroke:#456f5f;stroke-width:.6}
+.w6-layout-host .w6-truck-wheel{fill:none;stroke:#657b64;stroke-width:4}
+.w6-layout-host .w6-parking-line{fill:none;stroke:#d4dacb;stroke-width:1;stroke-dasharray:6 4}
+.w6-layout-host .w6-outside-label{font-size:9.5px;font-weight:750;letter-spacing:.8px;fill:#8b9a7e}
+.w6-layout-host .w6-outside-small{font-size:8.8px;font-weight:600;letter-spacing:.9px;fill:#96a18b}
+.w6-layout-host .w6-plan-eyebrow{font-size:12px;font-weight:750;letter-spacing:1.5px;fill:#63816b}
+.w6-layout-host .w6-plan-total{font-size:15px;font-weight:850;letter-spacing:.6px;fill:#245843}
+.w6-layout-host .w6-dimension{fill:none;stroke:#a7b69b;stroke-width:1}
+.w6-layout-host .w6-dimension-tick{fill:none;stroke:#6e896b;stroke-width:1.4}
+.w6-layout-host .w6-dimension-label{font-size:14px;font-weight:750;fill:#5a7759;letter-spacing:.3px}
+.w6-layout-host .w6-building-note{font-size:10px;font-weight:650;letter-spacing:.65px;fill:#7b8c70}
+.w6-layout-host .w6-scale-line{fill:none;stroke:#829777;stroke-width:1}
+.w6-layout-host .w6-scale-solid{fill:#5f7f60;stroke:#5f7f60;stroke-width:1}
+.w6-layout-host .w6-scale-light{fill:#ebefdf;stroke:#5f7f60;stroke-width:1}
+.w6-layout-host .w6-scale-label{font-size:10.5px;font-weight:600;fill:#708666}
+.w6-layout-host .w6-photo-hint{font-size:10.4px;font-weight:700;letter-spacing:.85px;fill:#6a8569}
+@media(prefers-reduced-motion:reduce){.w6-layout-host .w6-zone-base,.w6-layout-host .w6-zone-outline,.w6-layout-host .w6-furniture{transition:none}}

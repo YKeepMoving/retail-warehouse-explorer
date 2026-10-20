@@ -1,0 +1,10 @@
+.git/
+.openai/
+.sites*/
+node_modules/
+work/
+outputs/
+.env
+.env.*
+*.mp4
+*.tar.gz
