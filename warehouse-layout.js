@@ -3,16 +3,18 @@
   'use strict';
   const NS = 'http://www.w3.org/2000/svg';
   const ZONES = [
-    {id:'inbound',x:0,y:0,w:100,h:600,label:'Inbound & receiving',group:'shared'},
+    {id:'inbound-qa',x:0,y:0,w:100,h:95,label:'Inbound QA & hold',group:'shared'},
+    {id:'inbound',x:0,y:95,w:100,h:505,label:'Inbound & receiving',group:'shared'},
     {id:'outbound',x:900,y:0,w:100,h:600,label:'Outbound & dispatch',group:'shared'},
     {id:'aisle-north',x:100,y:180,w:800,h:30,label:'North cross-aisle',group:'shared'},
     {id:'aisle-south',x:100,y:390,w:800,h:30,label:'South cross-aisle',group:'shared'},
     {id:'reserve',x:100,y:0,w:300,h:180,label:'Reserve pallet storage',group:'shared'},
     {id:'highbay',x:400,y:0,w:300,h:180,label:'Automated high-bay',group:'shared'},
-    {id:'oversize',x:700,y:0,w:200,h:180,label:'Oversize & bulky',group:'b2b'},
-    {id:'gtp',x:100,y:210,w:300,h:180,label:'Robotic tote storage',group:'b2c'},
-    {id:'replenish',x:400,y:210,w:100,h:180,label:'Decant & replenish',group:'shared'},
-    {id:'pick',x:500,y:210,w:150,h:180,label:'Goods-to-person pick',group:'b2c'},
+    {id:'oversize',x:700,y:0,w:200,h:180,label:'Oversize & bulky: B2C and B2B',group:'shared'},
+    {id:'aisle-link',x:100,y:210,w:40,h:180,label:'North–south pallet transfer aisle',group:'shared'},
+    {id:'gtp',x:140,y:210,w:270,h:180,label:'Robotic tote storage',group:'b2c'},
+    {id:'replenish',x:410,y:210,w:240,h:80,label:'Decant & replenish',group:'b2c'},
+    {id:'pick',x:410,y:290,w:240,h:100,label:'Goods-to-person pick',group:'b2c'},
     {id:'pack',x:650,y:210,w:130,h:180,label:'Pack & label',group:'b2c'},
     {id:'sort',x:780,y:210,w:120,h:180,label:'Parcel sortation',group:'b2c'},
     {id:'rack',x:100,y:420,w:400,h:180,label:'Forward pick / case storage',group:'shared'},
@@ -63,6 +65,7 @@
       return s;
     }
     if(z.id==='oversize') {
+      s+=txt(x+12,y+44,'B2C + B2B BULKY HANDLING','w6-bulky-shared-note');
       for(let r=0;r<3;r++) for(let c=0;c<3;c++) {
         const xx=x+16+c*58,yy=y+64+r*34;
         s+=rect(xx,yy,43,24,'w6-bulky');
@@ -71,31 +74,35 @@
       return s;
     }
     if(z.id==='gtp') {
-      s+=rect(x+13,y+56,273,108,'w6-grid-bed');
-      for(let r=0;r<6;r++) for(let c=0;c<17;c++) {
+      s+=rect(x+13,y+36,243,128,'w6-grid-bed');
+      for(let r=0;r<7;r++) for(let c=0;c<15;c++) {
         const shade=(c+r)%4;
-        s+=rect(x+17+c*15.7,y+60+r*16.6,13,14,'w6-grid-cell w6-grid-cell-'+shade,{rx:1});
+        s+=rect(x+17+c*16,y+40+r*17,13,14,'w6-grid-cell w6-grid-cell-'+shade,{rx:1});
       }
-      s+=use('gridbot',x+46,y+75,25,22)+use('gridbot',x+205,y+111,25,22)+use('gridbot',x+125,y+140,25,22);
+      s+=use('gridbot',x+46,y+75,25,22)+use('gridbot',x+197,y+111,25,22)+use('gridbot',x+116,y+140,25,22);
+      s+=rect(x+z.w-9,y+31,7,18,'w6-grid-port')+rect(x+z.w-9,y+121,7,18,'w6-grid-port');
       return s;
     }
     if(z.id==='replenish') {
-      for(let r=0;r<3;r++) {
-        s+=rect(x+12,y+72+r*29,75,20,'w6-table');
-        s+=use('pallet',x+15,y+73+r*29,23,17)+use('tote',x+60,y+75+r*29,20,14);
-        s+=path('M'+(x+42)+' '+(y+82+r*29)+'h12','w6-small-arrow');
+      s+=rect(x+2,y+31,7,18,'w6-grid-port');
+      for(let c=0;c<2;c++) {
+        const xx=x+18+c*112;
+        s+=rect(xx,y+36,91,20,'w6-table');
+        s+=use('pallet',xx+3,y+37,25,18)+use('tote',xx+62,y+39,23,15);
+        s+=path('M'+(xx+36)+' '+(y+46)+'h18','w6-small-arrow');
+        s+=person(xx+46,y+65,180);
       }
-      s+=person(x+49,y+163,180);
       return s;
     }
     if(z.id==='pick') {
-      for(let r=0;r<3;r++) {
-        s+=rect(x+14,y+69+r*32,121,18,'w6-table');
-        s+=use('tote',x+20,y+72+r*32,23,13)+use('tote',x+54,y+72+r*32,23,13);
-        s+=person(x+106,y+92+r*32,180);
+      s+=rect(x+2,y+41,7,18,'w6-grid-port');
+      for(let r=0;r<2;r++) {
+        s+=rect(x+18,y+37+r*27,191,17,'w6-table');
+        s+=use('tote',x+26,y+39+r*27,23,13)+use('tote',x+65,y+39+r*27,23,13);
+        s+=person(x+146,y+59+r*27,180);
       }
-      s+=path('M'+(x+128)+' '+(y+64)+'V'+(y+158),'w6-conveyor-base');
-      s+=path('M'+(x+128)+' '+(y+64)+'V'+(y+158),'w6-conveyor-rollers');
+      s+=path('M'+(x+219)+' '+(y+35)+'V'+(y+87),'w6-conveyor-base');
+      s+=path('M'+(x+219)+' '+(y+35)+'V'+(y+87),'w6-conveyor-rollers');
       return s;
     }
     if(z.id==='pack') {
@@ -163,18 +170,34 @@
       }
       return s;
     }
+    if(z.id==='inbound-qa') {
+      s+=txt(x+50,y+47,'BLOCKED STOCK','w6-hold-label',{'text-anchor':'middle'});
+      s+=rect(x+12,y+53,76,33,'w6-hold-bay',{rx:0});
+      s+=use('pallet',x+20,y+58,29,23)+use('carton',x+55,y+60,23,20);
+      s+=path('M'+(x+83)+' '+(y+56)+'l-11 26','w6-hold-barrier');
+      return s;
+    }
     if(z.id==='inbound'||z.id==='outbound') {
       const out=z.id==='outbound';
-      s+=txt(x+50,y+81,out?'LOAD & RELEASE':'SCAN · COUNT · QA','w6-dock-small',{'text-anchor':'middle'});
+      // Dock locations stay aligned with the exterior doors when QA occupies the top of inbound.
+      s+=txt(x+50,out?81:579,out?'LOAD & RELEASE':'SCAN · COUNT · QA','w6-dock-small',{'text-anchor':'middle'});
       for(let i=0;i<7;i++) {
-        const yy=y+113+i*65;
+        const yy=113+i*65;
         s+=rect(x+13,yy,71,47,'w6-dock-bay',{rx:0});
         s+=txt(x+20,yy+11,(out?'O':'I')+String(i+1).padStart(2,'0'),'w6-bay-number');
         s+=use('pallet',x+42,yy+14,30,24);
         s+=path('M'+(out?x+85:x+5)+' '+(yy+24)+'h10','w6-small-arrow');
       }
-      s+=use('forklift',x+28,y+552,25,25);
-      s+=txt(x+50,y+586,out?'STORE + PARCEL':'SUPPLIER GOODS','w6-dock-small',{'text-anchor':'middle'});
+      s+=use('forklift',x+28,552,25,25);
+      s+=txt(x+50,out?586:592,out?'STORE + PARCEL':'SUPPLIER GOODS','w6-dock-small',{'text-anchor':'middle'});
+      return s;
+    }
+    if(z.id==='aisle-link') {
+      s+=path('M'+(x+8)+' '+(y+7)+'V'+(y+173)+'M'+(x+32)+' '+(y+7)+'V'+(y+173),'w6-transfer-edge');
+      for(let i=0;i<3;i++) {
+        const yy=y+29+i*60;
+        s+=path('M'+(x+6)+' '+(yy+5)+'l3-6l3 6M'+(x+28)+' '+(yy-5)+'l3 6l3-6','w6-transfer-arrow');
+      }
       return s;
     }
     if(z.id.indexOf('aisle-')===0) {
@@ -185,12 +208,15 @@
     return s;
   }
   function label(z) {
-    const x=z.x,y=z.y,small=z.h===60,dock=z.w===100&&z.h===600,aisle=z.id.indexOf('aisle-')===0;
+    const x=z.x,y=z.y,small=z.h===60,dock=z.id==='inbound'||z.id==='outbound',aisle=z.id==='aisle-north'||z.id==='aisle-south';
+    if(z.id==='aisle-link') return '<g class="w6-zone-labels" data-label="'+z.id+'">'+txt(x+23,y+99,'N–S PALLET TRANSFER AISLE','w6-transfer-label',{'text-anchor':'middle',transform:'rotate(-90 '+(x+23)+' '+(y+99)+')'})+camera(x+20,y+17,true)+'</g>';
+    if(z.id==='inbound') return '<g class="w6-zone-labels" data-label="'+z.id+'">'+txt(x+7,y+12,'RECEIVING','w6-receiving-title')+camera(x+88,y+8,true)+'</g>';
+    if(z.id==='inbound-qa') return '<g class="w6-zone-labels" data-label="'+z.id+'">'+txt(x+8,y+17,'INBOUND','w6-label w6-label-narrow')+txt(x+8,y+33,'QA / HOLD','w6-label w6-label-narrow')+camera(x+85,y+18,true)+'</g>';
     if(aisle) return '<g class="w6-zone-labels" data-label="'+z.id+'">'+rect(x+10,y+5,286,21,'w6-aisle-label-bg')+txt(x+17,y+20,(z.id==='aisle-north'?'NORTH':'SOUTH')+' CROSS-AISLE','w6-aisle-label')+camera(x+314,y+15,true)+'</g>';
     const titles={
       inbound:['INBOUND &','RECEIVING'],outbound:['OUTBOUND &','DISPATCH'],
       reserve:['RESERVE PALLET STORAGE'],highbay:['AUTOMATED HIGH-BAY'],oversize:['OVERSIZE & BULKY'],
-      gtp:['ROBOTIC TOTE STORAGE'],replenish:['DECANT &','REPLENISH'],pick:['GOODS-TO-','PERSON PICK'],pack:['PACK & LABEL'],sort:['PARCEL','SORTATION'],
+      gtp:['ROBOTIC TOTE STORAGE'],replenish:['DECANT & REPLENISH'],pick:['GOODS-TO-PERSON PICK'],pack:['PACK & LABEL'],sort:['PARCEL','SORTATION'],
       rack:['FORWARD PICK / CASE STORAGE'],b2b:['STORE ORDER','CONSOLIDATION'],returns:['RETURNS &','QUALITY'],
       control:['CONTROL'],maintenance:['MAINTENANCE'],charging:['CHARGING']
     };
@@ -226,7 +252,7 @@
     for(let i=0;i<7;i++) {
       const y=205+i*65;
       s+=rect(91,y,9,28,'w6-dock-door',{rx:0})+rect(1100,y,9,28,'w6-dock-door',{rx:0});
-      if(i%2===0) s+=truck(20,y+3,false);
+      if(i%2===0||i===3) s+=truck(20,y+3,false);
       if(i%3!==1) s+=truck(1111,y+3,true);
       s+=path('M12 '+(y+35)+'H89M1111 '+(y+35)+'h76','w6-parking-line');
     }
@@ -253,7 +279,7 @@
       this.mode='both';
       this.active=null;
       host.classList.add('w6-layout-host');
-      host.innerHTML='<svg xmlns="'+NS+'" class="w6-layout-svg" viewBox="0 0 1200 790" role="group" aria-labelledby="w6-layout-title w6-layout-description"><title id="w6-layout-title">Conceptual retail warehouse layout</title><desc id="w6-layout-description">Conceptual warehouse with illustrative proportions and no physical scale. Goods enter on the left, move through storage, picking, packing or store order consolidation, and leave on the right. Each zone is a button that opens AI-generated illustrations. Eighteen operational zones illustrate shared inbound, B2C, B2B, returns and support functions.</desc>'+symbols+outdoor()+dimensions()+'<g class="w6-building" transform="translate(100,90)">'+rect(0,0,1000,600,'w6-concrete',{fill:'url(#w6-concrete)',rx:0})+'<g class="w6-zone-layer"></g><g class="w6-route-layer" aria-hidden="true"></g><g class="w6-label-layer" aria-hidden="true"></g>'+rect(0,0,1000,600,'w6-building-wall',{rx:0})+'<g class="w6-actor-layer" aria-hidden="true"></g></g></svg>';
+      host.innerHTML='<svg xmlns="'+NS+'" class="w6-layout-svg" viewBox="0 0 1200 790" role="group" aria-labelledby="w6-layout-title w6-layout-description"><title id="w6-layout-title">Conceptual retail warehouse layout</title><desc id="w6-layout-description">Conceptual warehouse with illustrative proportions and no physical scale. Goods enter on the left, move through storage, picking, packing or store order consolidation, and leave on the right. Each zone is a button that opens AI-generated illustrations. Operational zones illustrate shared inbound, a segregated inbound QA hold bay, a north–south pallet transfer aisle, B2C, B2B, returns and support functions. Decant and picking ports both adjoin robotic tote storage.</desc>'+symbols+outdoor()+dimensions()+'<g class="w6-building" transform="translate(100,90)">'+rect(0,0,1000,600,'w6-concrete',{fill:'url(#w6-concrete)',rx:0})+'<g class="w6-zone-layer"></g><g class="w6-route-layer" aria-hidden="true"></g><g class="w6-label-layer" aria-hidden="true"></g>'+rect(0,0,1000,600,'w6-building-wall',{rx:0})+'<g class="w6-actor-layer" aria-hidden="true"></g></g></svg>';
       this.svg=host.querySelector('svg');
       this.routeLayer=host.querySelector('.w6-route-layer');
       this.actorLayer=host.querySelector('.w6-actor-layer');
@@ -287,11 +313,12 @@
     }
     setActive(zoneId) {
       this.active=zoneId||null;
+      const activeIds=new Set(Array.isArray(zoneId)?zoneId:[zoneId]);
       this.zoneNodes.forEach((node,id)=>{
-        node.classList.toggle('w6-is-active',id===this.active);
-        node.setAttribute('aria-pressed',String(id===this.active));
+        node.classList.toggle('w6-is-active',activeIds.has(id));
+        node.setAttribute('aria-pressed',String(activeIds.has(id)));
       });
-      this.labelLayer.querySelectorAll('[data-label]').forEach(node=>node.classList.toggle('w6-is-active',node.getAttribute('data-label')===this.active));
+      this.labelLayer.querySelectorAll('[data-label]').forEach(node=>node.classList.toggle('w6-is-active',activeIds.has(node.getAttribute('data-label'))));
     }
     setMode(mode) {
       this.mode=['both','b2b','b2c'].includes(mode)?mode:'both';

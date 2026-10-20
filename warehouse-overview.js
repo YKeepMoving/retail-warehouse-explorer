@@ -137,40 +137,31 @@
     "context": "AI-generated illustration: An illustrative row of low mobile robots parked at charging docks. This is a fictional educational scene, not a photograph of a real facility."
   }
 };
- const P=(x,y,unit)=>({x,y,unit});
- const phases=[
-  {zone:'inbound',title:'Receive supplier goods',group:'Inbound',copy:'Pallets and cartons arrive, are identified and move into receiving. Shared inbound stock can later serve either channel.',unit:'pallet',points:[P(-30,300),P(50,300)]},
-  {zone:'inbound',title:'Scan, count and accept',group:'Inbound checks',copy:'Confirm the receipt and inspect condition. Stock with an unresolved discrepancy stays on hold.',unit:'case',points:[P(50,300),P(60,355)]},
-  {zone:'highbay',title:'Put away into reserve',group:'Storage',copy:'Record the storage location. Pallet reserve and high-bay options handle compatible loads; their capacity is not estimated here.',unit:'pallet',points:[P(60,355),P(85,355),P(85,195),P(550,195),P(550,145)]},
-  {zone:'replenish',title:'Decant and replenish bins',group:'Inventory',channel:'b2c',copy:'Bring reserve cases to goods-in. Identify the items and confirm quantities as compatible stock is decanted into bins.',unit:'case',points:[P(550,145),P(550,195),P(450,195),P(450,270)]},
-  {zone:'gtp',title:'Store and present small items',group:'B2C storage',channel:'b2c',copy:'The filled bins enter the small-item storage subsystem. Mobile robots present stock; grasping is a separate task.',unit:'bin',points:[P(450,270),P(450,195),P(250,195),P(250,270)]},
-  {zone:'control',title:'Reserve stock and release work',group:'Digital order',type:'data',copy:'Orders become pick tasks. The dashed instruction travels to execution; inventory does not move into the control room.',unit:'tote',points:[P(850,450),P(895,450),P(895,405),P(575,405),P(575,300)]},
-  {zone:'pick',title:'Pick the consumer order',group:'B2C fulfillment',channel:'b2c',copy:'Present inventory from small-item storage and confirm the ordered products into a tote. Exceptions and difficult items need suitable handling.',unit:'tote',points:[P(250,270),P(250,355),P(575,355),P(575,300)]},
-  {zone:'pack',title:'Pack, verify and label',group:'B2C fulfillment',channel:'b2c',copy:'Combine the order, protect the goods and label the parcel. The material stream continues through the parcel line.',unit:'parcel',points:[P(575,300),P(575,355),P(715,355),P(715,300)]},
-  {zone:'rack',title:'Pick cases for the store',group:'B2B case picking',channel:'b2b',copy:'Reserve stock feeds the case-picking area. Collect the store quantities for the mixed-case consolidation route shown here.',unit:'case',points:[P(550,145),P(550,195),P(495,195),P(495,405),P(300,405),P(300,510)]},
-  {zone:'b2b',title:'Prepare the retail store load',group:'B2B fulfillment',channel:'b2b',copy:'Picked cases become stable, labeled store loads. This is the mixed-case route; full-pallet order lines can bypass case preparation in a different configuration.',unit:'pallet',points:[P(300,510),P(300,405),P(600,405),P(600,510)]},
-  {zone:'sort',title:'Sort the consumer parcels',group:'B2C outbound',channel:'b2c',copy:'Direct compatible parcels to the carrier and service lane. Store pallets use the separate B2B preparation route.',unit:'parcel',points:[P(715,300),P(715,355),P(840,355),P(840,300)]},
-  {zone:'outbound',title:'Dispatch both channels',group:'Outbound',copy:'Scan handover and load the appropriate vehicle. Road transport and delivery happen beyond this indoor footprint.',unit:'parcel',points:[P(840,300),P(840,355),P(950,355),P(950,300),P(1040,300)]},
-  {zone:'returns',title:'Inspect an optional return',group:'Reverse flow · optional',type:'return',copy:'A returned item re-enters for inspection. Saleable stock may be restocked; damaged or uncertain stock remains blocked for a decision.',unit:'parcel',points:[P(1040,560),P(1040,640),P(750,640),P(750,550),P(750,510)]},
-  {zone:'gtp',title:'Restock approved inventory',group:'Return disposition · example',type:'return',copy:'This example follows an approved saleable return back to storage after the inventory update. Other dispositions follow different routes.',unit:'bin',points:[P(750,510),P(750,405),P(250,405),P(250,350)]}
- ];
- function activePhases(){return phases.filter(p=>!p.channel||mode==='both'||p.channel===mode);}
- function phasePoints(p){if(p.type==='data'&&mode==='b2b')return [P(850,450),P(850,405),P(300,405),P(300,510)];if(p.zone==='outbound'&&mode==='b2b')return [P(600,510),P(695,510),P(695,405),P(950,405),P(950,510),P(1040,510)];if(p.type==='return'&&p.zone==='gtp'&&mode==='b2b')return[P(750,510),P(750,405),P(495,405),P(495,195),P(550,195),P(550,145)];return p.points;}
+
+ Object.assign(metadata,{
+  'inbound-qa':{photos:['quality'],role:'A segregated bay holds damaged, unidentified or discrepant inbound stock. Blocked inventory is not available for order allocation until an authorized decision and inventory update.',context:'AI-generated illustration of an inspection and hold operation; a fictional scene.'},
+  'aisle-link':{photos:['forklift-b2b'],role:'The reserved north–south transfer aisle connects the two cross-aisles. Store-case replenishment uses this corridor instead of crossing the consumer storage and manned picking areas.',context:'AI-generated illustration of compatible pallet handling; a fictional scene.'}
+ });
+ metadata.outbound.photos=['dispatch-b2c','truck-b2b'];
+ metadata.replenish.role='The B2C decant input port directly adjoins tote storage. Replenishment repeats when stock levels or released demand require it. Store-case refills use the dedicated pallet aisle and forward case faces.';
+ metadata.pick.role='This picking port directly adjoins tote storage, separately from decant. Presented inventory is picked into order containers that continue to packing without passing through decant.';
+ const Flow=window.WAREHOUSE_OVERVIEW_FLOW;
+ const {P,phases}=Flow;
+ function activePhases(){return phases.filter(p=>!p.channel||mode==='both'||p.channel===mode).map(p=>Flow.view(p,mode));}
  function routeData(points){const lens=[];let total=0;for(let i=1;i<points.length;i++){const l=Math.hypot(points[i].x-points[i-1].x,points[i].y-points[i-1].y);lens.push(l);total+=l;}return{points,lens,total};}
  function sample(route,fraction){let d=Math.max(0,Math.min(1,fraction))*route.total;for(let i=0;i<route.lens.length;i++){const a=route.points[i],b=route.points[i+1],l=route.lens[i];if(d<=l||i===route.lens.length-1){const t=l?d/l:0;return{x:a.x+(b.x-a.x)*t,y:a.y+(b.y-a.y)*t,unit:a.unit||'case'};}d-=l;}return route.points[route.points.length-1];}
  const pathD=points=>points.map((p,i)=>(i?'L':'M')+p.x+' '+p.y).join(' ');
  const colors={shared:'#ad884b',b2c:'#376eaf',b2b:'#007961',return:'#cf902a'};
- const routes={
-  b2c:routeData([P(-30,300,'pallet'),P(50,300,'pallet'),P(85,300,'pallet'),P(85,195,'case'),P(450,195,'case'),P(450,270,'bin'),P(450,195,'bin'),P(250,195,'bin'),P(250,270,'bin'),P(250,355,'bin'),P(575,355,'tote'),P(715,355,'parcel'),P(840,355,'parcel'),P(950,355,'parcel'),P(950,300,'parcel'),P(1040,300,'parcel')]),
-  b2b:routeData([P(-30,300,'pallet'),P(50,300,'pallet'),P(85,300,'pallet'),P(85,195,'pallet'),P(550,195,'pallet'),P(550,145,'pallet'),P(550,195,'pallet'),P(495,195,'case'),P(495,405,'case'),P(300,405,'case'),P(300,510,'case'),P(300,405,'case'),P(600,405,'case'),P(600,510,'pallet'),P(695,510,'pallet'),P(695,405,'pallet'),P(950,405,'pallet'),P(950,510,'pallet'),P(1040,510,'pallet')]),
-  shared:routeData([P(50,300,'pallet'),P(85,300,'pallet'),P(85,405,'pallet'),P(300,405,'pallet'),P(300,510,'pallet'),P(300,405,'case'),P(450,405,'case'),P(450,355,'case')]),
-  return:routeData([P(1040,560,'parcel'),P(1040,640,'parcel'),P(750,640,'parcel'),P(750,550,'parcel'),P(750,510,'bin'),P(750,405,'bin'),P(250,405,'bin'),P(250,350,'bin')])
- };
- const returnB2B=routeData([P(1040,560,'pallet'),P(1040,640,'pallet'),P(750,640,'pallet'),P(750,550,'pallet'),P(750,510,'pallet'),P(750,405,'pallet'),P(495,405,'pallet'),P(495,195,'pallet'),P(550,195,'pallet'),P(550,145,'pallet')]);
- const guideNodes={};Object.entries(routes).forEach(([key,r])=>{guideNodes[key]=svgEl('path',{d:pathD(r.points),stroke:colors[key],class:'w6-flow-guide',...(key==='return'?{'stroke-dasharray':'4 5'}:{})},model.routeLayer);});
- const digital=svgEl('path',{class:'w6-digital-line',d:pathD(phases.find(p=>p.type==='data').points)},model.routeLayer);
- const digitalB2B=svgEl('path',{class:'w6-digital-line',d:pathD([P(850,450),P(850,405),P(300,405),P(300,510)])},model.routeLayer);
- const highlight=svgEl('path',{class:'w6-flow-active'},model.routeLayer);
+ const routes=Object.fromEntries(Object.entries(Flow.ambient).map(([key,points])=>[key,routeData(points)]));
+ const guideNodes={};['shared','b2c','b2b','return'].forEach(key=>{guideNodes[key]=svgEl('path',{d:pathD(routes[key].points),stroke:colors[key],class:'w6-flow-guide','data-flow':key,...(key==='return'?{'stroke-dasharray':'4 5'}:{})},model.routeLayer);});
+ const digital=svgEl('path',{class:'w6-digital-line',d:pathD(Flow.legs.orderB2C),'data-instruction':'b2c'},model.routeLayer);
+ const digitalB2B=svgEl('path',{class:'w6-digital-line',d:pathD(Flow.legs.orderB2B),'data-instruction':'b2b'},model.routeLayer);
+ const feedback={};
+ const defs=svgEl('defs',{},model.routeLayer);
+ const arrow=svgEl('marker',{id:'w6-replenishment-arrow',viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:5,markerHeight:5,orient:'auto'},defs);
+ svgEl('path',{d:'M0 0L10 5L0 10Z',fill:'#835993'},arrow);
+ ['b2c','b2b'].forEach(channel=>{feedback[channel]=svgEl('path',{class:'w6-replenishment-feedback',d:pathD(Flow.legs[channel==='b2c'?'feedbackB2C':'feedbackB2B']),'data-feedback':channel,'marker-end':'url(#w6-replenishment-arrow)'},model.routeLayer);});
+ const highlights=Array.from({length:3},()=>svgEl('path',{class:'w6-flow-active'},model.routeLayer));
  const shapes={
   pallet:'<rect x="-9" y="-8" width="18" height="16" rx="2"/><path d="M-9-2H9M-9 3H9M-12 11H12"/>',
   case:'<rect x="-8" y="-6" width="16" height="12" rx="1"/><path d="M0-6V6M-8-1H8"/>',
@@ -178,21 +169,49 @@
   tote:'<path d="M-9-6H9L7 7H-7Z"/><path d="M-10-6H10M-4-2H4"/>',
   parcel:'<path d="M0-10L10-5V6L0 11L-10 6V-5Z"/><path d="M-10-5L0 1L10-5M0 1V11"/>'
  };
- function packet(parent,color,hero=false){const g=svgEl('g',{class:'w6-packet'},parent);if(hero)svgEl('circle',{r:22,fill:color,class:'w6-packet-halo'},g);const shape=svgEl('g',{fill:color,stroke:hero?'#fff7df':'#f3f8ef','stroke-width':hero?1.5:1,transform:hero?'scale(1.25)':'scale(0.8)'},g);return{g,shape,lastUnit:null};}
- function setPacket(obj,pos,unit){obj.g.setAttribute('transform',`translate(${pos.x.toFixed(2)} ${pos.y.toFixed(2)})`);if(obj.lastUnit!==unit){obj.shape.innerHTML=shapes[unit]||shapes.case;obj.lastUnit=unit;}}
- const packets=[];[['b2c',8,78],['b2b',6,100],['shared',4,64],['return',2,100]].forEach(([kind,count,cycle])=>{for(let i=0;i<count;i++)packets.push({...packet(model.actorLayer,colors[kind]),kind,cycle,offset:i/count+(kind==='b2b'?.03:0)});});
+ function packet(parent,color,hero=false){const g=svgEl('g',{class:hero?'w6-packet w6-hero':'w6-packet'},parent);if(hero)svgEl('circle',{r:22,fill:color,class:'w6-packet-halo'},g);const shape=svgEl('g',{fill:color,stroke:hero?'#fff7df':'#f3f8ef','stroke-width':hero?1.5:1,transform:hero?'scale(1.25)':'scale(0.8)'},g);return{g,shape,lastUnit:null};}
+ function setPacket(obj,pos,unit){obj.g.setAttribute('transform',`translate(${pos.x.toFixed(2)} ${pos.y.toFixed(2)})`);obj.g.setAttribute('data-unit',unit);if(obj.lastUnit!==unit){obj.shape.innerHTML=shapes[unit]||shapes.case;obj.lastUnit=unit;}}
+ const packets=[];[['b2c',8,78],['b2b',6,100],['shared',3,64],['return',2,100]].forEach(([kind,count,cycle])=>{for(let i=0;i<count;i++)packets.push({...packet(model.actorLayer,colors[kind]),kind,cycle,offset:i/count+(kind==='b2b'?.03:0)});});
  const robots=[];for(let i=0;i<7;i++){const g=svgEl('g',{class:'w6-robot'},model.actorLayer);g.innerHTML='<ellipse cy="7" rx="12" ry="5" fill="#124332" opacity=".13"/><rect x="-11" y="-7" width="22" height="15" rx="5" fill="#4d8f77" stroke="#f6fbf0" stroke-width="1.5"/><rect x="-5" y="-3" width="10" height="7" rx="2" fill="#c7d7ac"/><circle cx="8" cy="-4" r="1.8" fill="#f0c762"/>';robots.push({g,offset:i/7});}
- const hero=packet(model.actorLayer,'#d49b2d',true);
- function phaseZone(phase){return phase.type==='return'&&phase.zone==='gtp'&&mode==='b2b'?'highbay':phase.zone;}
- function setMode(){model.setMode(mode);const both=mode==='both';digital.style.display=both||mode==='b2c'?'':'none';digitalB2B.style.display=both||mode==='b2b'?'':'none';guideNodes.b2c.style.display=both||mode==='b2c'?'':'none';guideNodes.b2b.style.display=both||mode==='b2b'?'':'none';guideNodes.return.setAttribute('d',pathD(mode==='b2b'?returnB2B.points:routes.return.points));packets.forEach(p=>p.g.style.display=(p.kind==='shared'||p.kind==='return'||both||p.kind===mode)?'':'none');document.querySelectorAll('[data-w6-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.w6Mode===mode)));buildPhases();lastPhase=-1;render();}
- function buildPhases(){const nav=$('#w6-phases');nav.replaceChildren();activePhases().forEach((p,i)=>{const b=document.createElement('button');b.type='button';b.textContent=String(i+1).padStart(2,'0')+' '+p.title.replace(/^(Receive |Scan, count and |Put away into |Store and present |Replenish |Reserve stock and |Pick the |Pack, verify and |Prepare the |Sort the |Dispatch |Inspect an |Restock )/,'');b.title=p.title;b.dataset.phase=String(i);b.addEventListener('click',()=>{clock=i*stageSeconds;last=0;lastPhase=-1;render();});nav.append(b);});}
- function render(){const list=activePhases(),phaseIndex=Math.floor(clock/stageSeconds)%list.length,phase=list[phaseIndex],progress=(clock%stageSeconds)/stageSeconds;
-  if(lastPhase!==phaseIndex){lastPhase=phaseIndex;model.setActive(phaseZone(phase));$('#w6-phase-number').textContent=String(phaseIndex+1).padStart(2,'0');$('#w6-phase-group').textContent=phase.group;$('#w6-phase-title').textContent=phase.title;$('#w6-phase-copy').textContent=phase.copy;document.querySelectorAll('#w6-phases button').forEach((b,i)=>{if(i===phaseIndex)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});$('#w6-announce').textContent=`${phaseIndex+1} of ${list.length}: ${phase.title}.`;}
-  const p=reduced.matches?1:progress,phaseRoute=routeData(phasePoints(phase));highlight.setAttribute('d',pathD(phaseRoute.points));highlight.setAttribute('stroke',phase.type==='data'?'#517aab':phase.type==='return'?colors.return:phase.channel?colors[phase.channel]:'#d39b35');highlight.setAttribute('stroke-dasharray',`${phaseRoute.total} ${phaseRoute.total}`);highlight.setAttribute('stroke-dashoffset',String(phaseRoute.total*(1-p)));
-  digital.setAttribute('stroke-dashoffset',String(-(clock*9)%22));digital.style.opacity=phase.type==='data'?'1':'.18';digitalB2B.setAttribute('stroke-dashoffset',String(-(clock*9)%22));digitalB2B.style.opacity=phase.type==='data'?'1':'.18';
-  const heroPos=phase.type==='data'?(mode==='b2b'?P(550,145):P(250,270)):sample(phaseRoute,p);setPacket(hero,heroPos,phase.type==='data'?(mode==='b2b'?'pallet':'bin'):phase.unit);
-  const trafficTime=reduced.matches?0:clock;packets.forEach(packet=>{const r=packet.kind==='return'&&mode==='b2b'?returnB2B:routes[packet.kind],fraction=(trafficTime/packet.cycle+packet.offset)%1,pos=sample(r,fraction);setPacket(packet,pos,pos.unit);packet.g.style.opacity=fraction<.015?String(fraction/.015):fraction>.985?String((1-fraction)/.015):'1';});
-  robots.forEach((robot,i)=>{const t=(trafficTime/(i%2?48:60)+robot.offset)%1;let x,y;if(i<5){x=115+t*760;y=i%2?405:195;}else{x=895;y=420+t*160;}robot.g.setAttribute('transform',`translate(${x.toFixed(2)} ${y.toFixed(2)})`);});
+ const heroes=Array.from({length:3},()=>packet(model.actorLayer,'#d49b2d',true));
+ const phaseZone=phase=>phase.zone;
+ function setMode(){
+  model.setMode(mode);const both=mode==='both';
+  digital.style.display=both||mode==='b2c'?'':'none';digitalB2B.style.display=both||mode==='b2b'?'':'none';
+  guideNodes.b2c.style.display=both||mode==='b2c'?'':'none';guideNodes.b2b.style.display=both||mode==='b2b'?'':'none';
+  guideNodes.return.setAttribute('d',pathD(mode==='b2b'?routes.returnB2B.points:routes.return.points));
+  Object.entries(feedback).forEach(([channel,node])=>node.style.display=both||mode===channel?'':'none');
+  packets.forEach(p=>p.g.style.display=(p.kind==='shared'||p.kind==='return'||both||p.kind===mode)?'':'none');
+  document.querySelectorAll('[data-w6-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.w6Mode===mode)));
+  buildPhases();lastPhase=-1;render();
+ }
+ function buildPhases(){const nav=$('#w6-phases');nav.replaceChildren();activePhases().forEach((phase,i)=>{const b=document.createElement('button');b.type='button';b.textContent=String(i+1).padStart(2,'0')+' '+phase.shortLabel;b.title=phase.title;b.dataset.phase=String(i);b.dataset.phaseId=phase.id;b.addEventListener('click',()=>{clock=i*stageSeconds;last=0;lastPhase=-1;render();});nav.append(b);});}
+ function render(){
+  const list=activePhases(),ticks=clock/stageSeconds,wholeTicks=Math.floor(ticks+1e-9),phaseIndex=wholeTicks%list.length,phase=list[phaseIndex],progress=Math.max(0,ticks-wholeTicks);
+  if(lastPhase!==phaseIndex){
+   lastPhase=phaseIndex;model.setActive(phase.zones||(phase.id==='inspect'?['inbound','inbound-qa']:phase.zone));
+   $('#w6-phase-number').textContent=String(phaseIndex+1).padStart(2,'0');$('#w6-phase-group').textContent=phase.group;$('#w6-phase-title').textContent=phase.title;$('#w6-phase-copy').textContent=phase.copy;
+   document.querySelectorAll('#w6-phases button').forEach((b,i)=>{if(i===phaseIndex)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+   $('#w6-announce').textContent=`${phaseIndex+1} of ${list.length}: ${phase.title}.`;
+  }
+  const progressShown=reduced.matches?1:progress;
+  phase.routes.forEach((key,i)=>{
+   const route=routeData(Flow.legs[key]),node=highlights[i];
+   node.style.display='';node.setAttribute('data-route',key);node.setAttribute('data-phase-id',phase.id);node.setAttribute('d',pathD(route.points));
+   node.setAttribute('stroke',phase.type==='data'?'#517aab':phase.type==='return'?colors.return:key==='dispatchB2B'?colors.b2b:key==='dispatchB2C'?colors.b2c:phase.channel?colors[phase.channel]:'#d39b35');
+   node.setAttribute('stroke-dasharray',phase.type==='data'?'5 6':`${route.total} ${route.total}`);node.setAttribute('stroke-dashoffset',String(phase.type==='data'?-(clock*9)%22:route.total*(1-progressShown)));
+   const actor=heroes[i];actor.g.style.display='';actor.g.setAttribute('data-route',key);
+   // An order is an instruction; goods remain in storage until a physical task starts.
+   const position=phase.type==='data'?(key==='orderB2B'?P(250,145):P(280,250)):sample(route,progressShown);
+   setPacket(actor,position,phase.type==='data'?(key==='orderB2B'?'pallet':'bin'):Flow.legs[key][0].unit);
+  });
+  for(let i=phase.routes.length;i<3;i++){highlights[i].style.display='none';heroes[i].g.style.display='none';}
+  digital.setAttribute('stroke-dashoffset',String(-(clock*9)%22));digital.style.opacity=phase.type==='data'?'1':'.18';
+  digitalB2B.setAttribute('stroke-dashoffset',String(-(clock*9)%22));digitalB2B.style.opacity=phase.type==='data'?'1':'.18';
+  Object.values(feedback).forEach(node=>{node.style.opacity=['release','replenish','pick','cases'].includes(phase.id)?'.8':'.35';node.setAttribute('stroke-dashoffset',String(-(clock*7)%16));});
+  const trafficTime=reduced.matches?0:clock;
+  packets.forEach(actor=>{const route=actor.kind==='return'&&mode==='b2b'?routes.returnB2B:routes[actor.kind],fraction=(trafficTime/actor.cycle+actor.offset)%1,position=sample(route,fraction);setPacket(actor,position,position.unit);actor.g.style.opacity=fraction<.015?String(fraction/.015):fraction>.985?String((1-fraction)/.015):'1';});
+  robots.forEach((robot,i)=>{const t=(trafficTime/(i%2?48:60)+robot.offset)%1;const x=i<5?115+t*760:120,y=i<5?(i%2?405:195):220+t*160;robot.g.setAttribute('transform',`translate(${x.toFixed(2)} ${y.toFixed(2)})`);});
   $('#w6-phase-fill').style.width=(progress*100)+'%';
  }
  function controls(){$('#w6-pause').textContent=playing?'Ⅱ Pause':'▶ Play';$('#w6-pause').setAttribute('aria-pressed',String(playing));$('#w6-live').textContent=playing?'● Auto-running':'Ⅱ Paused';$('#w6-reduced').hidden=!reduced.matches;}

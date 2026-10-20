@@ -8,6 +8,8 @@
 .w6-layout-host .w6-zone-inbound .w6-zone-base,.w6-layout-host .w6-zone-outbound .w6-zone-base{fill:#ecf1e7}
 .w6-layout-host .w6-group-support .w6-zone-base{fill:#e9eee7}
 .w6-layout-host .w6-zone-aisle-north .w6-zone-base,.w6-layout-host .w6-zone-aisle-south .w6-zone-base{fill:#f6edcf;stroke:#d4c69d}
+.w6-layout-host .w6-zone-aisle-link .w6-zone-base{fill:#f7efd6;stroke:#c9b778;stroke-width:1.5}
+.w6-layout-host .w6-zone-inbound-qa .w6-zone-base{fill:#fbede2;stroke:#c39b77;stroke-width:1.5}
 .w6-layout-host .w6-zone-outline{fill:none;stroke:transparent;stroke-width:3;pointer-events:none;transition:stroke .15s}
 .w6-layout-host .w6-zone:hover .w6-zone-outline{stroke:#388b73}
 .w6-layout-host .w6-zone:focus-visible .w6-zone-outline{stroke:#00735f;stroke-width:3.5;stroke-dasharray:6 3}
@@ -19,6 +21,8 @@
 .w6-layout-host .w6-label-layer,.w6-layout-host .w6-route-layer,.w6-layout-host .w6-actor-layer{pointer-events:none}
 .w6-layout-host .w6-label{font-size:14px;letter-spacing:.42px;font-weight:800;fill:#244e42}
 .w6-layout-host .w6-label-narrow{font-size:12.2px;letter-spacing:.13px}
+.w6-layout-host .w6-receiving-title{font-size:10px;letter-spacing:.25px;font-weight:800;fill:#244e42}
+.w6-layout-host .w6-bulky-shared-note{font-size:8.6px;letter-spacing:.3px;font-weight:750;fill:#6e765d}
 .w6-layout-host .w6-zone-area{font-size:11.7px;font-weight:600;fill:#697d68}
 .w6-layout-host .w6-zone-labels.w6-is-active .w6-label{fill:#825919}
 .w6-layout-host .w6-support-title{font-size:11px;font-weight:800;letter-spacing:.02px;fill:#315949}
@@ -38,6 +42,7 @@
 .w6-layout-host .w6-grid-cell-1{fill:#cbdfbe}
 .w6-layout-host .w6-grid-cell-2{fill:#e1eace}
 .w6-layout-host .w6-grid-cell-3{fill:#bcd1ad}
+.w6-layout-host .w6-grid-port{fill:#4b987f;stroke:#f3f8ed;stroke-width:1.2}
 .w6-layout-host .w6-table{fill:#b7c7b5;stroke:#7d9d83;stroke-width:1}
 .w6-layout-host .w6-person ellipse{fill:#247b68;stroke:#eff5e8;stroke-width:1.1}
 .w6-layout-host .w6-person circle{fill:#e3b98c;stroke:#bd9972;stroke-width:.5}
@@ -59,6 +64,9 @@
 .w6-layout-host .w6-tool{fill:none;stroke:#6c8b73;stroke-width:2}
 .w6-layout-host .w6-charge-bay{fill:#dce9d6;stroke:#80a378;stroke-width:1;stroke-dasharray:2 2}
 .w6-layout-host .w6-dock-bay{fill:#e2e9d9;stroke:#b1c19f;stroke-width:1;stroke-dasharray:4 3}
+.w6-layout-host .w6-hold-bay{fill:#f3d9c5;stroke:#ad7653;stroke-width:1.5;stroke-dasharray:4 2}
+.w6-layout-host .w6-hold-label{font-size:8.4px;letter-spacing:.45px;font-weight:850;fill:#8b4c34}
+.w6-layout-host .w6-hold-barrier{fill:none;stroke:#a75a3d;stroke-width:3}
 .w6-layout-host .w6-bay-number{font-size:7.7px;letter-spacing:.5px;font-weight:650;fill:#869a7a}
 .w6-layout-host .w6-dock-small{font-size:8px;font-weight:700;fill:#7d9072;letter-spacing:.3px}
 .w6-layout-host .w6-small-arrow{fill:none;stroke:#5b9479;stroke-width:2;stroke-linecap:round}
@@ -66,6 +74,9 @@
 .w6-layout-host .w6-lane-arrow{fill:none;stroke:#c9b66f;stroke-width:2;stroke-linejoin:round;opacity:.8}
 .w6-layout-host .w6-aisle-label-bg{fill:#f6edcf}
 .w6-layout-host .w6-aisle-label{font-size:11.3px;font-weight:800;fill:#8c7738;letter-spacing:.25px}
+.w6-layout-host .w6-transfer-edge{fill:none;stroke:#cbb673;stroke-width:1;stroke-dasharray:6 4}
+.w6-layout-host .w6-transfer-arrow{fill:none;stroke:#9d8a44;stroke-width:1.8;stroke-linejoin:round}
+.w6-layout-host .w6-transfer-label{font-size:9.1px;letter-spacing:.25px;font-weight:850;fill:#826c30;paint-order:stroke;stroke:#f7efd6;stroke-width:3px;stroke-linejoin:round}
 .w6-layout-host .w6-aisle-area{font-size:10.8px;font-weight:550;fill:#9a8548}
 .w6-layout-host .w6-apron{stroke:#e0e5d9;stroke-width:1}
 .w6-layout-host .w6-dock-door{fill:#8ba28a;stroke:#f5f8ed;stroke-width:1.5}

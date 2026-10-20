@@ -28,7 +28,7 @@ window.WAREHOUSE_PROCESS_GUIDE = {
         "Unload into the assigned receiving area.",
         "Scan product or load identities and count quantities.",
         "Check condition and any required batch or expiry information.",
-        "Hold discrepancies or damaged stock for review; accept eligible goods."
+        "Move discrepancies or damaged stock to the inbound QA hold bay for review; accept eligible goods."
       ],
       "pain": "Wrong quantities and hidden damage create inventory errors.",
       "automation": "Barcode capture, conveyors and suitable inspection cameras assist receiving.",
@@ -41,7 +41,7 @@ window.WAREHOUSE_PROCESS_GUIDE = {
       "input": "Accepted, identified stock",
       "output": "Traceable stock in a confirmed location",
       "subprocesses": [
-        "Choose pallet, high-bay, tote or bulky storage for the load.",
+        "Choose reserve pallet, automated high-bay or bulky storage for accepted goods; route compatible cases through decant into tote storage.",
         "Create a movement task to the assigned location.",
         "Move the goods and confirm product, quantity and location.",
         "Maintain stock status and resolve differences through inventory checks."
@@ -53,14 +53,14 @@ window.WAREHOUSE_PROCESS_GUIDE = {
     {
       "id": "replenish",
       "title": "Replenish the picking areas",
-      "summary": "Keep accessible pick stock available as orders consume inventory.",
-      "input": "Reserve stock and replenishment demand",
+      "summary": "Run an ongoing replenishment loop as pick stock is consumed: planned minimum/maximum rules and released-order demand can both trigger work.",
+      "input": "Reserve stock, pick-face consumption, minimum/maximum targets and released-order demand",
       "output": "Confirmed stock at the pick face or in totes",
       "subprocesses": [
-        "Detect low pick stock or demand from released orders.",
+        "Monitor consumption and minimum/maximum levels; also create demand-based replenishment after order release when pick stock is insufficient.",
         "Retrieve the required reserve pallet or cases.",
         "For B2C, decant compatible case contents into identified totes.",
-        "For B2B, refill the case pick face; confirm quantities moved."
+        "For B2B, refill the case pick face; confirm all quantities moved and continue monitoring consumption."
       ],
       "pain": "Empty pick locations stop downstream work despite stock in reserve.",
       "automation": "Demand or minimum/maximum rules trigger work; conveyors connect decant and storage.",

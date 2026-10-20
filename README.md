@@ -32,4 +32,10 @@ Website: https://ykeepmoving.github.io/retail-warehouse-explorer/
 
 ## Verification
 
-All 28 generated images decoded successfully. All 18 overview-zone galleries, AI labels and provenance links were checked. The bulky-goods route selects the large-item packing and tail-lift delivery images. Process checks passed for 18 stages and 72 subprocesses, filters, full-pallet bypass, keyboard navigation, deep links/history, animation pause/resume and responsive layouts.
+All 28 generated images decoded successfully. All 20 overview-zone galleries, AI labels and provenance links were checked. The bulky-goods route selects the large-item packing and tail-lift delivery images. Process checks passed for 18 stages and 72 subprocesses, filters, full-pallet bypass, keyboard navigation, deep links/history, animation pause/resume and responsive layouts.
+
+## Warehouse flow corrections — 20 October 2026
+
+Both-mode dispatch shows consumer parcels and store pallets on separate routes. All arrivals, dispatches and returns use drawn dock doors. A dedicated pallet-transfer aisle separates B2B replenishment from consumer workstations. Decant and picking directly adjoin the tote grid; inbound discrepancies have a segregated QA hold bay. Replenishment is an ongoing demand-feedback loop. Storage alternatives, shared bulky handling, approved-return examples and mode-specific labels are explicit.
+
+Verification covers 20 conceptual zones, all 35 phase views across the three channel modes, 18 process-guide stages and 72 subprocesses. Coordinates and symbols remain illustrative, not a physical engineering or safety certification.
